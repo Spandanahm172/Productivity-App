@@ -1,0 +1,96 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: var(--space-6);
+  color: var(--text-muted);
+}
+
+.appHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: var(--space-6);
+  background: var(--gradient-card);
+  border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.appHeader h1 {
+  font-size: 2rem;
+  background: var(--gradient-main);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: var(--space-1);
+}
+
+.dateText {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.statsBadge {
+  display: flex;
+  gap: var(--space-4);
+  background: rgba(255, 255, 255, 0.05);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.coinCounter, .streakCounter {
+  font-weight: 600;
+  font-family: var(--font-heading);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.coinCounter { color: var(--accent-gold); }
+.streakCounter { color: var(--accent-danger); text-shadow: 0 0 10px rgba(239, 68, 68, 0.6); }
+
+.appContent {
+  flex: 1;
+  padding: var(--space-6);
+  overflow-y: auto;
+  position: relative;
+}
+
+.bottomNav {
+  display: flex;
+  justify-content: space-around;
+  padding: var(--space-4) var(--space-6);
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--bg-tertiary);
+  padding-bottom: env(safe-area-inset-bottom, var(--space-4));
+}
+
+.navItem {
+  color: var(--text-muted);
+  font-weight: 600;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.navItem:hover {
+  color: var(--text-primary);
+}
+
+.navItem.active {
+  background: var(--gradient-main);
+  color: white;
+  box-shadow: var(--shadow-glow-primary);
+}

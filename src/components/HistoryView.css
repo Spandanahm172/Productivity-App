@@ -1,0 +1,122 @@
+.historyContainer, .historyDetail {
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-4);
+   padding-bottom: var(--space-8);
+}
+
+.calendarGrid {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   gap: var(--space-2);
+   margin-top: var(--space-4);
+}
+
+.dayBox {
+   aspect-ratio: 1;
+   background: var(--bg-tertiary);
+   border-radius: var(--radius-md);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   transition: all var(--transition-fast);
+   border: 1px solid transparent;
+}
+
+.dayBox:not(:disabled):hover {
+   transform: scale(1.05);
+   border-color: var(--accent-primary);
+}
+
+.dayBox:disabled {
+   opacity: 0.5;
+   cursor: not-allowed;
+}
+
+.dayBox.perfect {
+   background: rgba(16, 185, 129, 0.2);
+   border-color: rgba(16, 185, 129, 0.5);
+}
+
+.dayBox.partial {
+   background: rgba(239, 68, 68, 0.1);
+   border-color: rgba(239, 68, 68, 0.3);
+}
+
+.dayNum {
+   font-size: 0.8rem;
+   font-weight: 600;
+   color: var(--text-muted);
+   position: absolute;
+   top: 4px;
+   left: 6px;
+}
+
+.dayBox.perfect .dayNum, .dayBox.partial .dayNum {
+   color: var(--text-primary);
+}
+
+.dayIcon {
+   font-size: 1.2rem;
+   margin-top: 10px;
+}
+
+/* Detail View */
+.backBtn {
+   align-self: flex-start;
+   color: var(--accent-primary);
+   background: rgba(139, 92, 246, 0.1);
+   padding: var(--space-2) var(--space-4);
+   border-radius: var(--radius-full);
+   font-weight: 600;
+   transition: all var(--transition-fast);
+}
+
+.backBtn:hover {
+   background: rgba(139, 92, 246, 0.2);
+}
+
+.detailDate {
+   margin-top: var(--space-2);
+   color: var(--text-primary);
+}
+
+.detailSummary {
+   display: flex;
+   gap: var(--space-4);
+   background: var(--gradient-card);
+   padding: var(--space-4);
+   border-radius: var(--radius-lg);
+   border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.summaryItem {
+   font-weight: 600;
+   color: var(--text-secondary);
+}
+
+.readOnlyTask {
+   display: flex;
+   align-items: center;
+   gap: var(--space-3);
+   padding: var(--space-2) var(--space-3);
+   background: rgba(255, 255, 255, 0.02);
+   border-radius: var(--radius-md);
+   margin-bottom: 4px;
+}
+
+.taskName {
+   text-transform: capitalize;
+   font-weight: 500;
+}
+
+.taskName.done {
+   color: var(--text-primary);
+}
+
+.taskName.missed {
+   color: var(--text-muted);
+   text-decoration: line-through;
+}

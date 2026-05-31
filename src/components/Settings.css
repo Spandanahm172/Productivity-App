@@ -1,0 +1,109 @@
+.settingsContainer {
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-4);
+   padding-bottom: var(--space-6);
+}
+
+.categoryList {
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-4);
+}
+
+.editCategoryCard {
+   background: var(--bg-secondary);
+   border-radius: var(--radius-lg);
+   padding: var(--space-3);
+   border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.editCategoryHeader {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: var(--space-3);
+   border-bottom: 1px solid var(--bg-tertiary);
+   padding-bottom: var(--space-2);
+}
+
+.editCategoryHeader h3 {
+   font-size: 1.1rem;
+   color: var(--text-primary);
+}
+
+.iconBtn {
+   background: transparent;
+   padding: 4px;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background 0.2s;
+   border: none;
+}
+
+.iconBtn:hover {
+   background: rgba(255, 255, 255, 0.1);
+}
+
+.iconBtn.danger {
+   color: var(--accent-danger);
+}
+
+.iconBtn.small {
+   font-size: 0.8rem;
+   opacity: 0.7;
+}
+
+.iconBtn.small:hover {
+   opacity: 1;
+}
+
+.editTaskList {
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-2);
+}
+
+.editTaskRow {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: rgba(0, 0, 0, 0.2);
+   padding: var(--space-2) var(--space-3);
+   border-radius: var(--radius-md);
+   color: var(--text-secondary);
+   font-size: 0.95rem;
+}
+
+.addTaskBtn {
+   color: var(--accent-secondary);
+   font-weight: 600;
+   text-align: left;
+   padding: var(--space-2) 0;
+   margin-top: var(--space-2);
+   font-size: 0.9rem;
+   background: none;
+   border: none;
+   cursor: pointer;
+}
+
+.addTaskBtn:hover {
+   text-decoration: underline;
+}
+
+.addCategoryBtn {
+   background: var(--gradient-card);
+   color: var(--text-primary);
+   border: 1px solid var(--accent-secondary);
+   padding: var(--space-3);
+   border-radius: var(--radius-md);
+   font-weight: 600;
+   font-size: 1rem;
+   margin-top: var(--space-4);
+   transition: all var(--transition-fast);
+   cursor: pointer;
+}
+
+.addCategoryBtn:hover {
+   background: rgba(6, 182, 212, 0.2);
+}
